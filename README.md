@@ -20,12 +20,14 @@ This was originally a project I started during my winter break in 2016. I could 
 In the **(old || new)/bin/** folders are the compiled version for the respective files.
 
 ## Refactoring
-
+(Coming soon)
 
 
 
 
 ## How to Use
+(Coming soon)
+
 
 ## Future Work
 - [ ] use GridLayout or GridBagLayout to allow for resizing of the window.
