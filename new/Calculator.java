@@ -337,7 +337,8 @@ public class Calculator
 		}
 		sign = c; // maybe would be fix and can change to return string
 		message += ("\n-------------\n"
-						+ "'I' = Integer\n'S' = Short\n'L' = Long\n'F' = Float\n'D' = Double\n");
+						+ "'I' = Integer\n'S' = Short\n'L' = Long\n'F' = Float\n'D' = Double\n"
+						+ "\nEnter the character to use as a data type:");
 		return message;
 	}
 
