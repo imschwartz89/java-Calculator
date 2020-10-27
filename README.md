@@ -1,6 +1,16 @@
 # java-Calculator
 Calculator written in Java with the ability to choose the data type (int, short, long, float, double) and to do the following operations: addition, subtraction, multiplication, division, and modulus.
 
+## Table of Contents
+- Java Version
+- Background
+- Files
+- Refactoring
+- How to Use
+  - calcTester
+  - calcGUI
+- Future Work
+
 ## Java Version
 openjdk version "1.8.0_265"
 
