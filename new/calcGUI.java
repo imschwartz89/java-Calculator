@@ -11,41 +11,41 @@ import javax.swing.*;
 public class calcGUI extends JFrame implements MouseListener{
 
   Calculator one = new Calculator();
-	private JFrame frame = new JFrame();
-	private JPanel panel = new JPanel();
-	private JLabel numberLabel = new JLabel();   //contains the current number being entered
-	private JLabel equationLabel = new JLabel(); //contains the current equation
-	private JLabel dataTypeLabel = new JLabel(); //contains the current selected data type
+  private JFrame frame = new JFrame();
+  private JPanel panel = new JPanel();
+  private JLabel numberLabel = new JLabel();   //contains the current number being entered
+  private JLabel equationLabel = new JLabel(); //contains the current equation
+  private JLabel dataTypeLabel = new JLabel(); //contains the current selected data type
   private JLabel errorLabel = new JLabel();    //contains the error/warning message if there is one
   private JLabel equalLabel = new JLabel();    //contains the computed number
 
-	private JButton equalButton = new JButton("=");
-	private JButton addButton = new JButton("+");
-	private JButton subButton = new JButton("-");
-	private JButton multButton = new JButton("*");
-	private JButton divButton = new JButton("/");
-	private JButton modButton = new JButton("%");
-	private JButton button1 = new JButton("1");
-	private JButton button2 = new JButton("2");
-	private JButton button3 = new JButton("3");
-	private JButton button4 = new JButton("4");
-	private JButton button5 = new JButton("5");
-	private JButton button6 = new JButton("6");
-	private JButton button7 = new JButton("7");
-	private JButton button8 = new JButton("8");
-	private JButton button9 = new JButton("9");
-	private JButton button0 = new JButton("0");
-	private JButton decButton = new JButton(".");
-	private JButton intButton = new JButton("int");
-	private JButton shortButton = new JButton("short");
-	private JButton longButton = new JButton("long");
-	private JButton floatButton = new JButton("float");
-	private JButton doubleButton = new JButton("double");
-	private JButton resetButton = new JButton("R");
-	private JButton negButton = new JButton("neg");//the negative button, adds or removes a negative sign to the number
+  private JButton equalButton = new JButton("=");
+  private JButton addButton = new JButton("+");
+  private JButton subButton = new JButton("-");
+  private JButton multButton = new JButton("*");
+  private JButton divButton = new JButton("/");
+  private JButton modButton = new JButton("%");
+  private JButton button1 = new JButton("1");
+  private JButton button2 = new JButton("2");
+  private JButton button3 = new JButton("3");
+  private JButton button4 = new JButton("4");
+  private JButton button5 = new JButton("5");
+  private JButton button6 = new JButton("6");
+  private JButton button7 = new JButton("7");
+  private JButton button8 = new JButton("8");
+  private JButton button9 = new JButton("9");
+  private JButton button0 = new JButton("0");
+  private JButton decButton = new JButton(".");
+  private JButton intButton = new JButton("int");
+  private JButton shortButton = new JButton("short");
+  private JButton longButton = new JButton("long");
+  private JButton floatButton = new JButton("float");
+  private JButton doubleButton = new JButton("double");
+  private JButton resetButton = new JButton("R");
+  private JButton negButton = new JButton("neg");//the negative button, adds or removes a negative sign to the number
 
-	public calcGUI()
-	{
+  public calcGUI()
+  {
     initListeners(); //initialize buttons
 
     panel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 5));
@@ -56,15 +56,15 @@ public class calcGUI extends JFrame implements MouseListener{
     setBoundsButtons(); //creates each button of the desired size (will be removed after GridLayout)
     panelAddButtons();  //add buttons to the panels
 
-		frameAddLabels();   //add labels to the frame
+    frameAddLabels();   //add labels to the frame
 
-		frame.add(panel, BorderLayout.CENTER); //add panel to frame
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setTitle("Calculator");
-		frame.pack();
-		frame.setVisible(true);
+    frame.add(panel, BorderLayout.CENTER); //add panel to frame
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setTitle("Calculator");
+    frame.pack();
+    frame.setVisible(true);
     frame.setResizable(false);
-	}
+  }
 
   //initializes mouse to listen to all buttons
   public void initListeners()
@@ -103,64 +103,64 @@ public class calcGUI extends JFrame implements MouseListener{
   public void setBoundsButtons()
   {
     equalButton.setBounds(305, 445, 90, 100);
-		addButton.setBounds(305, 385, 90, 60);
-		subButton.setBounds(305, 325, 90, 60);
-		multButton.setBounds(305, 265, 90, 60);
-		divButton.setBounds(305, 205, 90, 60);
-		modButton.setBounds(305, 145, 90, 60);
+    addButton.setBounds(305, 385, 90, 60);
+    subButton.setBounds(305, 325, 90, 60);
+    multButton.setBounds(305, 265, 90, 60);
+    divButton.setBounds(305, 205, 90, 60);
+    modButton.setBounds(305, 145, 90, 60);
 
-		button1.setBounds(95, 355, 70, 75);
-		button2.setBounds(165, 355, 70, 75);
-		button3.setBounds(235, 355, 70, 75);
-		button4.setBounds(95, 280, 70, 75);
-		button5.setBounds(165, 280, 70, 75);
-		button6.setBounds(235, 280, 70, 75);
-		button7.setBounds(95, 205, 70, 75);
-		button8.setBounds(165, 205, 70, 75);
-		button9.setBounds(235, 205, 70, 75);
-		button0.setBounds(165, 430, 70, 115);
+    button1.setBounds(95, 355, 70, 75);
+    button2.setBounds(165, 355, 70, 75);
+    button3.setBounds(235, 355, 70, 75);
+    button4.setBounds(95, 280, 70, 75);
+    button5.setBounds(165, 280, 70, 75);
+    button6.setBounds(235, 280, 70, 75);
+    button7.setBounds(95, 205, 70, 75);
+    button8.setBounds(165, 205, 70, 75);
+    button9.setBounds(235, 205, 70, 75);
+    button0.setBounds(165, 430, 70, 115);
 
-		decButton.setBounds(95, 430, 70, 60);
-		resetButton.setBounds(235, 430, 70, 115);
-		negButton.setBounds(95, 490, 70, 55);
+    decButton.setBounds(95, 430, 70, 60);
+    resetButton.setBounds(235, 430, 70, 115);
+    negButton.setBounds(95, 490, 70, 55);
 
-		intButton.setBounds(5, 145, 90, 80);
-		shortButton.setBounds(5, 225, 90, 80);
-		longButton.setBounds(5, 305, 90, 80);
-		floatButton.setBounds(5, 385, 90, 80);
-		doubleButton.setBounds(5, 465, 90, 80);
+    intButton.setBounds(5, 145, 90, 80);
+    shortButton.setBounds(5, 225, 90, 80);
+    longButton.setBounds(5, 305, 90, 80);
+    floatButton.setBounds(5, 385, 90, 80);
+    doubleButton.setBounds(5, 465, 90, 80);
   }
 
   //add all buttons to the panel so they can be displayed
   public void panelAddButtons()
   {
     panel.add(equalButton);
-		panel.add(addButton);
-		panel.add(subButton);
-		panel.add(multButton);
-		panel.add(divButton);
-		panel.add(modButton);
+    panel.add(addButton);
+    panel.add(subButton);
+    panel.add(multButton);
+    panel.add(divButton);
+    panel.add(modButton);
 
-		panel.add(button1);
-		panel.add(button2);
-		panel.add(button3);
-		panel.add(button4);
-		panel.add(button5);
-		panel.add(button6);
-		panel.add(button7);
-		panel.add(button8);
-		panel.add(button9);
-		panel.add(button0);
+    panel.add(button1);
+    panel.add(button2);
+    panel.add(button3);
+    panel.add(button4);
+    panel.add(button5);
+    panel.add(button6);
+    panel.add(button7);
+    panel.add(button8);
+    panel.add(button9);
+    panel.add(button0);
 
-		panel.add(decButton);
-		panel.add(resetButton);
-		panel.add(negButton);
+    panel.add(decButton);
+    panel.add(resetButton);
+    panel.add(negButton);
 
-		panel.add(intButton);
-		panel.add(shortButton);
-		panel.add(longButton);
-		panel.add(floatButton);
-		panel.add(doubleButton);
+    panel.add(intButton);
+    panel.add(shortButton);
+    panel.add(longButton);
+    panel.add(floatButton);
+    panel.add(doubleButton);
   }
 
   //add all labels to the frame to allow user
@@ -193,9 +193,9 @@ public class calcGUI extends JFrame implements MouseListener{
 
 
   //methods to handle mouse events, only need mouseClicked()
-	public void mouseEntered(MouseEvent e) { }
-	public void mouseClicked(MouseEvent e)
-	{
+  public void mouseEntered(MouseEvent e) { }
+  public void mouseClicked(MouseEvent e)
+  {
     //determines what button is pressed if any are pressed
     //  will run the correct method for the button pressed afterwards
     if(isNumButtonPressed(e))
@@ -208,27 +208,27 @@ public class calcGUI extends JFrame implements MouseListener{
       //this includes int, short, long, float, and double buttons
       dataTypeButtonPressed((JButton)e.getSource());
     }
-		else if(e.getSource() == negButton)
-		{
+    else if(e.getSource() == negButton)
+    {
       negButtonPressed();
-		}
-		else if(e.getSource() == resetButton)
-		{
+    }
+    else if(e.getSource() == resetButton)
+    {
       resetButtonPressed();
-		}
+    }
     else if(isSignTypeButtonPressed(e))
     {
       signTypeButtonPressed((JButton)e.getSource());
     }
-		else if(e.getSource() == equalButton)
-		{
+    else if(e.getSource() == equalButton)
+    {
       equalButtonPressed();
-		}
+    }
 
-	}
-	public void mouseExited(MouseEvent e) { }
-	public void mousePressed(MouseEvent e) { }
-	public void mouseReleased(MouseEvent e) { }
+  }
+  public void mouseExited(MouseEvent e) { }
+  public void mousePressed(MouseEvent e) { }
+  public void mouseReleased(MouseEvent e) { }
 
   //returns whether or not a number button is pressed
   //  0, 1, 2, 3, 4, 5, 6, 7, 8, 9
@@ -454,8 +454,8 @@ public class calcGUI extends JFrame implements MouseListener{
 
   //MAIN METHOD
   //launches the GUI by calling the constructor
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		new calcGUI();
-	}
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    new calcGUI();
+  }
 }
